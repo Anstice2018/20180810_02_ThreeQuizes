@@ -8,12 +8,8 @@ import android.widget.RadioButton;
 
 public class Main1Activity extends AppCompatActivity {
 
-    public static final String key = "key1";
+    public static final String key = "key";
     private CharSequence mChoiseName;       //選項內容
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +31,9 @@ public class Main1Activity extends AppCompatActivity {
     }
 
     public void clicknext(View view){
-
         Intent intent = new Intent(this, Main2Activity.class);
-
         intent.putExtra(key,mChoiseName);
         startActivity(intent);
     }
+
 }

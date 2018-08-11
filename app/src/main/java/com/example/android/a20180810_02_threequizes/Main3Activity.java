@@ -6,19 +6,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main3Activity extends AppCompatActivity {
 
-    public static final String key2 = "key2";
+    public static final String key3 = "key3";
     private CharSequence mChoiseName;       //選項內容
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main3);
 
         Intent intent = getIntent();
         Bundle 包 = intent.getExtras();
-        String answer = 包.getString("key");
+        String answer = 包.getString("key") + 包.getString("key2");
     }
 
     public void clickchoise(View view){
@@ -27,8 +27,8 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void clicknext(View view){
-        Intent intent = new Intent(this, Main3Activity.class);
-        intent.putExtra(key2,mChoiseName);
+        Intent intent = new Intent(this, Main4Activity.class);
+        intent.putExtra(key3,mChoiseName);
         startActivity(intent);
     }
 

@@ -14,7 +14,7 @@ public class Main4Activity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle 包 = intent.getExtras();
-        String answer = 包.getString("key" + "key3");
+        String answer = (包.getString("key") + "\n" + 包.getString("key2"));
         TextView tv = (TextView)findViewById(R.id.textView4);
         tv.setText("作答紀錄：" + "\n" + answer);
     }

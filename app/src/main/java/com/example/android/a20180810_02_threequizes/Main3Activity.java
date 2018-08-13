@@ -19,6 +19,13 @@ public class Main3Activity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle 包 = intent.getExtras();
         String answer = 包.getString("key") + 包.getString("key2");
+        initChoiseData();   //預設選擇 A 選項
+    }
+
+    private void initChoiseData(){
+        //預設選擇 A 選項
+        RadioButton radio = (RadioButton) findViewById(R.id.radioButton);
+        mChoiseName = radio.getText();          //取得選紐文字內容
     }
 
     public void clickchoise(View view){
